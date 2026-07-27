@@ -1,0 +1,12 @@
+import java.util.Arrays;
+import java.util.List;
+public class Reduce{
+    public static void main(String[] args) {
+        List<Integer> salaries = Arrays.asList(10000, 20000, 30000, 40000, 50000);
+        // Increase each salary by 10% and find total
+        int total = salaries.stream()
+                .map(salary -> (int)(salary * 1.1))
+                .reduce(0, (sum, salary) -> sum + salary);
+        System.out.println("Total updated salary: " + total);
+    }
+}
