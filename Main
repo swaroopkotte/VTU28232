@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Step 1: Read number of employees
+        int N = sc.nextInt();
+
+        // Step 2: Read salaries into an array
+        int[] salaries = new int[N];
+        for (int i = 0; i < N; i++) {
+            salaries[i] = sc.nextInt();
+        }
+
+        // Step 3: Increase each salary by 10%
+        for (int i = 0; i < N; i++) {
+            salaries[i] = (int)(salaries[i] * 1.10);
+        }
+
+        // Step 4: Print updated salaries
+        for (int i = 0; i < N; i++) {
+            System.out.print(salaries[i] + " ");
+        }
+    }
+}
