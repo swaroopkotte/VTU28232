@@ -1,5 +1,5 @@
 import java.util.function.Function;
-public class HigherOrderFunctionExample {
+public class HigherOrderFunctionExample2 {
     static void processSalary(double salary, Function<Double, Double> operation) {
         double result = operation.apply(salary);
        System.out.println("Updated Salary: " + result);
