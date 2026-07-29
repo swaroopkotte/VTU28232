@@ -1,0 +1,29 @@
+import java.util.function.Function;
+
+class Employee {
+    String name;
+    double salary;
+
+    Employee(String name, double salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Employee emp = new Employee("John", 50000);
+
+        // Function to increase salary by 10%
+        Function<Employee, Employee> increaseSalary = e -> {
+            e.salary = e.salary * 1.10;
+            return e;
+        };
+
+        Employee updatedEmp = increaseSalary.apply(emp);
+
+        System.out.println("Employee Name: " + updatedEmp.name);
+        System.out.println("Updated Salary: " + updatedEmp.salary);
+    }
+}
